@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">Про нас</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+</header>
+
+<main>
+    <section class="reviews-section">
+        <h2>Відгуки наших клієнтів</h2>
+        
+        <div class="reviews-container" id="reviewsContainer">
+            <div class="review">
+                <h3>Марина К.</h3>
+                <p>Чудовий ресторан! Прекрасна атмосфера та смачна їжа. Рекомендую!</p>
+            </div>
+            <div class="review">
+                <h3>Іван П.</h3>
+                <p>Вражаючий сервіс і страви. Це один із найкращих ресторанів, де я бував!</p>
+            </div>
+            <div class="review">
+                <h3>Олена Л.</h3>
+                <p>Все на найвищому рівні. Дуже смачні десерти, обов'язково повернуся!</p>
+            </div>
+            <div class="review">
+                <h3>Дмитро С.</h3>
+                <p>Безперечно, це найкращий ресторан, де я коли-небудь був. Завжди смачні страви та чудовий персонал!</p>
+            </div>
+            <div class="review">
+                <h3>Тетяна В.</h3>
+                <p>Мені дуже сподобалося! Ідеальне поєднання класичних страв і сучасного підходу до кухні. Дякую!</p>
+            </div>
+            <div class="review">
+                <h3>Анна М.</h3>
+                <p>Тут чудова атмосфера, і їжа завжди на найвищому рівні! Обов'язково прийду знову.</p>
+            </div>
+            <div class="review">
+                <h3>Олександр Г.</h3>
+                <p>Великий вибір страв, дуже смачно, а обслуговування на найвищому рівні! Раджу всім.</p>
+            </div>
+            <div class="review">
+                <h3>Софія К.</h3>
+                <p>Неймовірний ресторан, я вражена! Страви — це справжнє мистецтво. Обов'язково повернуся!</p>
+            </div>
+            <div class="review">
+                <h3>Валерій Р.</h3>
+                <p>Тут чудове меню, смачні страви та атмосферний інтер'єр. Мені все сподобалося!</p>
+            </div>
+            <div class="review">
+                <h3>Марина Т.</h3>
+                <p>Дуже приємно, що знайшла такий ресторан! Усе дуже смачно та затишно. Рекомендую!</p>
+            </div>
+        </div>
+
+        <h3>Додати свій відгук</h3>
+        <form id="feedbackForm" class="feedback-form">
+            <label for="userName">Ваше ім'я:</label>
+            <input type="text" id="userName" required>
+            
+            <label for="userFeedback">Ваш відгук:</label>
+            <textarea id="userFeedback" required></textarea>
+            
+            <button type="submit">Відправити</button>
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

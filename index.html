@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe&Lace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">Про нас</a>
+        <a href="#contacts">Контакти</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="javascript:void(0)" class="navbar-link" onclick="openModal()">Забронювати столик</a>
+    </nav>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="hero-box">
+            <h1>Luxe&Lace</h1>
+            <p>Ласкаво просимо до нашого ресторану французької кухні!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Забронювати столик</h2>
+            <form action="#">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Час:</label>
+                <input type="time" id="time" name="time" required>
+                
+                <label for="guests">Кількість осіб:</label>
+                <input type="number" id="guests" name="guests" placeholder="Введіть кількість" min="1" required>
+                
+                <button type="submit">Забронювати</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="contacts" class="contacts">
+        <h2>Контакти</h2>
+        <p>Адреса: вулиця Французька, 42, Київ, Україна</p>
+        <p>Телефон: +38 (012) 345-67-89</p>
+        <p>Час роботи: Пн-Пт: 10:00 - 22:00, Сб-Нд: 12:00 - 23:00</p>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+            <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-link">TikTok</a>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
