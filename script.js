@@ -51,3 +51,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+let cart = [];
+let total = 0;
+
+function addToCart(itemName, itemPrice) {
+    cart.push({ name: itemName, price: itemPrice });
+    total += itemPrice;
+    document.getElementById('cartCount').innerText = cart.length;
+    updateCart();
+}
+
+function updateCart() {
+    const cartItemsDiv = document.getElementById('cartItems');
+    cartItemsDiv.innerHTML = '';
+    cart.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.innerText = `${item.name} - ${item.price}₴`;
+        cartItemsDiv.appendChild(itemDiv);
+    });
+    document.getElementById('totalPrice').innerText = total;
+}
+
+function toggleCart() {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+}
+
+function checkout() {
+    alert('Дякуємо за ваше замовлення! Загальна сума: ' + total + '₴');
+    cart = [];
+    total = 0;
+    document.getElementById('cartCount').innerText = 0;
+    updateCart();
+    toggleCart();
+}
+
+
+window.onclick = function(event) {
+    const modal = document.getElementById('cartModal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
