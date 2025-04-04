@@ -32,7 +32,7 @@ header {
 }
 
 .hero {
-    background: url('https://github.com/n3doter/restaraunt/blob/main/d36f4720-d858-4565-893e-e8fb2da79d17.png?raw=true') center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/n3doter/SchoolProjectV2/refs/heads/main/d36f4720-d858-4565-893e-e8fb2da79d17.png') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -128,6 +128,15 @@ header {
 .menu-item b {
     font-size: 1.2rem;
     margin-top: auto; 
+}
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contacts {
@@ -271,7 +280,7 @@ header {
     display: block;
 }
 
-
+lol
 .review h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
