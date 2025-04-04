@@ -15,14 +15,14 @@ header {
 
 .navbar {
     background-color: #333;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin: 0 10px;
     font-size: 1rem;
 }
@@ -385,3 +385,23 @@ button:hover {
     background-color: #525252;
 }
 
+#scrollToTopBtn {
+    position: fixed; 
+    bottom: 5px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #ffffffa8;
+    color: rgb(41, 41, 41);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none; 
+    z-index: 1000; 
+    width: 200px; 
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
