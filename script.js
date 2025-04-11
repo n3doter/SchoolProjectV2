@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    
+    // scroll animation //
     let menuItems = document.querySelectorAll(".menu-item");
 
     function showMenuItems() {
@@ -92,7 +92,7 @@ function updateCart() {
 
 function toggleCart() {
     let modal = document.getElementById("cartModal");
-    if (modal.style.display === "none") {
+    if (modal.style.display === "none" || modal.style.display === "") {
         modal.style.display = "block";
     } else {
         modal.style.display = "none";
@@ -109,13 +109,12 @@ function checkout() {
     toggleCart();
 }
 
-
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
     let modal = document.getElementById("cartModal");
     if (event.target === modal) {
         modal.style.display = "none";
     }
-}
+});
 
 // knopka vverh //
 document.addEventListener("DOMContentLoaded", function () {
