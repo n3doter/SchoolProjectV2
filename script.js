@@ -135,3 +135,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+function searchMenu() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const menuItems = document.querySelectorAll('.menu-item');
+    
+    menuItems.forEach(item => {
+        const title = item.querySelector('h3').innerText.toLowerCase();
+        const description = item.querySelector('p').innerText.toLowerCase();
+
+        
+        if (title.includes(searchInput) && description.includes(searchInput)) {
+            item.style.display = ''; 
+        } else {
+            item.style.display = 'none'; 
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerIcon = document.getElementById('burgerIcon');
+    const burgerMenu = document.getElementById('burgerMenu');
+    
+    
+    if (!burgerIcon || !burgerMenu) {
+        console.error('Не найдены элементы бургер-меню! Проверьте HTML');
+        return;
+    }
+
+    burgerIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        burgerMenu.classList.toggle('open');
+    });
+});
+document.addEventListener('click', function(e) {
+    if (!burgerMenu.contains(e.target) && e.target !== burgerIcon) {
+        burgerMenu.classList.remove('open');
+    }
+});

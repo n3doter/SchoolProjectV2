@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="burger-menu" id="burgerMenu">
+        <div class="burger-content">
+            <a href="index.html">Головна</a>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">Про нас</a>
+            <a href="#contacts">Контакти</a>
+            <a href="reviews.html">Відгуки</a>
+            <a href="javascript:void(0)" onclick="openModal()">Забронювати столик</a>
+        </div>
+    </div>
 <header>
+    <div class="burger-icon" id="burgerIcon">☰</div>
     <nav class="navbar">
         <a href="index.html">Головна</a>
         <a href="menu.html">Меню</a>
@@ -23,6 +33,8 @@
     <section id="menu" class="menu">
         <h2>Наше меню</h2>
 
+        <input type="text" id="searchInput" placeholder="🔍 Введіть назву страви..." onkeyup="searchMenu()">
+        
         <div class="category">
             <h3>Закуски</h3>
             <div class="menu-container">
