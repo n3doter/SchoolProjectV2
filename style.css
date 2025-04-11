@@ -138,36 +138,39 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* kontaktu */
-
-.contacts {
-    padding: 50px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
+/*footer*/
+.footer {
+    background-color: #222;
     color: #fff;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.contacts h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.footer-column {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
 }
 
-.contacts p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ff9900;
 }
 
-.social-link {
+.footer-column a {
     color: #fff;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
     text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.social-link:hover {
-    color: #1da1f2;
+.footer-column a:hover {
+    color: #ff9900;
 }
 
 /* info */
@@ -336,29 +339,6 @@ button:hover {
 
 .close:hover {
     color: black;
-}
-
-/* knopka vverh */
-
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffffa8;
-    color: #292929;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
-    width: 200px;
-}
-
-#scrollToTopBtn:hover {
-    background-color: #555;
 }
 
 /* ekran na mobilu */
