@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторану</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html">Головна</a>
+        <a href="menu.html">Меню</a>
+        <a href="about.html">Про нас</a>
+        <a href="#contacts">Контакти</a>
+        <a href="reviews.html">Відгуки</a>
+        <a href="javascript:void(0)" class="cart-link" onclick="toggleCart()">Кошик (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
+
+<main>
+    <section id="menu" class="menu">
+        <h2>Наше меню</h2>
+
+        <div class="category">
+            <h3>Закуски</h3>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="https://s0.rbk.ru/v6_top_pics/media/img/1/69/346965338453691.webp" alt="Фуа-гра">
+                    <h3>Фуа-гра</h3>
+                    <p>Традиційна французька закуска з качиного або гусиного фуа-гра.</p>
+                    <p><b>Ціна: 1500₴</b></p>
+                    <button onclick="addToCart('Фуа-гра', 1500)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.hitaly.ru/wp-content/uploads/2021/04/tartar-iz-lososya.jpg" alt="Тартар з лосося">
+                    <h3>Тартар з лосося</h3>
+                    <p>Свіжий лосось, оливкова олія, спеції.</p>
+                    <p><b>Ціна: 800₴</b></p>
+                    <button onclick="addToCart('Тартар з лосося', 800)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://dailynews.kyiv.ua/wp-content/uploads/2025/01/kalmar.jpg" alt="Кальмари в клярі">
+                    <h3>Кальмари в клярі</h3>
+                    <p>Смажені кальмари з хрустким кляром.</p>
+                    <p><b>Ціна: 900₴</b></p>
+                    <button onclick="addToCart('Кальмари в клярі', 900)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tasty.com.ua/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ftasty-recipes%2F66784c57154007d125a33629%2Frecipe-BOWYcj4.jpg&w=1920&q=75" alt="Паштет з курячої печінки">
+                    <h3>Паштет з курячої печінки</h3>
+                    <p>Класичний французький паштет з курячої печінки.</p>
+                    <p><b>Ціна: 700₴</b></p>
+                    <button onclick="addToCart('Паштет з курячої печінки', 700)">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Основні страви</h3>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="https://media.ovkuse.ru/images/recipes/0aabbfaf-bc87-43cc-9a40-bc8c7b8d6819/0aabbfaf-bc87-43cc-9a40-bc8c7b8d6819_420_420.webp" alt="Беф бургіньон">
+                    <h3>Беф бургіньон</h3>
+                    <p>Яловичина, тушкована в вині з овочами.</p>
+                    <p><b>Ціна: 1200₴</b></p>
+                    <button onclick="addToCart('Беф бургіньон', 1200)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.ytimg.com/vi/4KEqyw80mhU/mqdefault.jpg" alt="Ко-конес">
+                    <h3>Ко-конес</h3>
+                    <p>Тушкована курка з овочами в білому вині.</p>
+                    <p><b>Ціна: 950₴</b></p>
+                    <button onclick="addToCart('Ко-конес', 950)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://region.dp.ua/wp-content/uploads/2024/06/khek-v-tomat.jpg" alt="Рибний рагу">
+                    <h3>Рибний рагу</h3>
+                    <p>Риба з овочами в ароматному соусі.</p>
+                    <p><b>Ціна: 1050₴</b></p>
+                    <button onclick="addToCart('Рибний рагу', 1050)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://dishmagazine.com/wp-content/uploads/2024/02/Peking-duck.jpg" alt="Качка по-пекінськи">
+                    <h3>Качка по-пекінськи</h3>
+                    <p>Качка, запечена з хрусткою шкіркою та спеціями.</p>
+                    <p><b>Ціна: 1400₴</b></p>
+                    <button onclick="addToCart('Качка по-пекінськи', 1400)">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Десерти</h3>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="https://thecake-school.ru/assets/img/blog/krem_brule-2.jpg" alt="Крем-брюле">
+                    <h3>Крем-брюле</h3>
+                    <p>Класичний французький десерт з ванільним кремом та хрусткою скоринкою.</p>
+                    <p><b>Ціна: 500₴</b></p>
+                    <button onclick="addToCart('Крем-брюле', 500)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://img.freepik.com/premium-photo/elegant-macarons-with-refined-flavors_724548-7521.jpg" alt="Макарони">
+                    <h3>Макарони</h3>
+                    <p>Французькі мигдальні печива з різними начинками.</p>
+                    <p><b>Ціна: 350₴</b></p>
+                    <button onclick="addToCart('Макарони', 350)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.ogorod.ru/images/cache/1200x750/crop/images%7Ccms-image-000109252.jpg" alt="Тарт татен">
+                    <h3>Тарт татен</h3>
+                    <p>Французький десерт з карамелізованими яблуками.</p>
+                    <p><b>Ціна: 450₴</b></p>
+                    <button onclick="addToCart('Тарт татен', 450)">Додати до кошика</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2020/09/35950949_m-2000x1200.jpg" alt="Шоколадний мус">
+                    <h3>Шоколадний мус</h3>
+                    <p>Ніжний шоколадний мус з ванільним соусом.</p>
+                    <p><b>Ціна: 550₴</b></p>
+                    <button onclick="addToCart('Шоколадний мус', 550)">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Ваш кошик</h2>
+            <div id="cartItems"></div>
+            <p><b>Загальна сума: <span id="totalPrice">0</span>₴</b></p>
+            <button onclick="checkout()">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <section id="contacts" class="contacts">
+        <h2>Контакти</h2>
+        <p>Адреса: вулиця Французька, 42, Київ, Україна</p>
+        <p>Телефон: +38 (012) 345-67-89</p>
+        <p>Час роботи: Пн-Пт: 10:00 - 22:00, Сб-Нд: 12:00 - 23:00</p>
+    
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+            <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-link">TikTok</a>
+        </div>
+    </section>
+    <button id="scrollToTopBtn" style="display: none;">↑</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
