@@ -116,25 +116,7 @@ window.addEventListener("click", function (event) {
     }
 });
 
-// knopka vverh //
-document.addEventListener("DOMContentLoaded", function () {
-    let scrollBtn = document.getElementById("scrollToTopBtn");
 
-    window.addEventListener("scroll", function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollBtn.style.display = "block";
-        } else {
-            scrollBtn.style.display = "none";
-        }
-    });
-
-    scrollBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-});
 function searchMenu() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const menuItems = document.querySelectorAll('.menu-item');
