@@ -40,7 +40,7 @@ header {
 /*osnovnaya chast`*/
 
 .hero {
-    background: url('https://github.com/n3doter/SchoolProjectV2/blob/main/images/d36f4720-d858-4565-893e-e8fb2da79d17.png?raw=true') center/cover no-repeat;
+    background: url('/images/d36f4720-d858-4565-893e-e8fb2da79d17.png') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
