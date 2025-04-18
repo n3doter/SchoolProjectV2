@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="burger-menu" id="burgerMenu">
+        <div class="burger-content">
+            <a href="index.html">Головна</a>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">Про нас</a>
+            <a href="#contacts">Контакти</a>
+            <a href="reviews.html">Відгуки</a>
+            <a href="javascript:void(0)" onclick="openModal()">Забронювати столик</a>
+        </div>
+    </div>
 <header>
+    <div class="burger-icon" id="burgerIcon">☰</div>
     <nav class="navbar">
         <a href="index.html">Головна</a>
         <a href="menu.html">Меню</a>
@@ -23,6 +33,8 @@
     <section id="menu" class="menu">
         <h2>Наше меню</h2>
 
+        <input type="text" id="searchInput" placeholder="🔍 Введіть назву страви..." onkeyup="searchMenu()">
+        
         <div class="category">
             <h3>Закуски</h3>
             <div class="menu-container">
@@ -137,35 +149,21 @@
         </div>
     </div>
 
-</main>
-<footer class="footer">
-    <div class="footer-column">
-        <h3>Luxe & Lace</h3>
-        <a href="about.html">Про нас</a>
-        <a href="reviews.html">Відгуки</a>
-        <a href="menu.html">Меню</a>
-    </div>
-
-    <div class="footer-column">
-        <h3>Отримати допомогу</h3>
-        <a href="">Написати в підтримку</a>
-    </div>
-
-    <div class="footer-column">
-        <h3>Новини та акції</h3>
-        <a href="">Блог</a>
-        <a href="">Знижки</a>
-        <a href="">Новинки</a>
-    </div>
+    <section id="contacts" class="contacts">
+        <h2>Контакти</h2>
+        <p>Адреса: вулиця Французька, 42, Київ, Україна</p>
+        <p>Телефон: +38 (012) 345-67-89</p>
+        <p>Час роботи: Пн-Пт: 10:00 - 22:00, Сб-Нд: 12:00 - 23:00</p>
     
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+            <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-link">TikTok</a>
+        </div>
+    </section>
+    <button id="scrollToTopBtn" style="display: none;">↑</button>
+</main>
 
-    <div class="footer-column">
-        <h3>Follow us</h3>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com" target="_blank">YouTube</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-    </div>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
