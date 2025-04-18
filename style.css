@@ -524,8 +524,8 @@ button:hover {
 .delete-review:hover {
     background: #ff1a1a;
 }
-/* Центрируем только заголовок и форму добавления отзыва */
-.reviews-section > h3 {  /* "Додати свій відгук" */
+
+.reviews-section > h3 {  
     text-align: center;
     margin: 40px 0 20px;
 }
@@ -535,12 +535,12 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;  /* Центрируем форму */
-    max-width: 600px; /* Фиксируем ширину */
-    text-align: left; /* Текст внутри формы — слева */
+    margin: 0 auto;  
+    max-width: 600px; 
+    text-align: left; 
 }
 
-/* Остальные стили формы (поля, кнопка) */
+
 .feedback-form label {
     display: block;
     margin: 10px 0 5px;
@@ -569,7 +569,7 @@ button:hover {
 .feedback-form button:hover {
     background: #525252;
 }
-.reviews-section > h3 {  /* Заголовок "Додати свій відгук" */
+.reviews-section > h3 {  
     text-align: center;
     margin: 40px auto 20px;
     width: 100%;
@@ -580,12 +580,12 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;  /* Центрируем форму */
-    max-width: 600px; /* Фиксируем ширину */
-    text-align: left; /* Текст внутри формы — слева */
+    margin: 0 auto; 
+    max-width: 600px; 
+    text-align: left; 
 }
 
-/* Остальные стили формы (чтобы кнопка и поля не растягивались) */
+
 .feedback-form label {
     display: block;
     margin: 10px 0 5px;
@@ -618,12 +618,12 @@ button:hover {
     margin: 0 auto !important;
     max-width: 600px !important;
 }
-/* Фикс для формы */
+
 .feedback-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем всё внутри */
+    align-items: center; 
     margin-top: 40px;
 }
 
@@ -638,5 +638,5 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px; /* Фиксируем ширину */
+    max-width: 600px; 
 }
