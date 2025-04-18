@@ -172,3 +172,89 @@ document.addEventListener('click', function(e) {
         burgerMenu.classList.remove('open');
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const feedbackForm = document.getElementById('feedbackForm');
+    const reviewsContainer = document.getElementById('reviewsContainer');
+
+    
+    loadReviewsFromLocalStorage();
+
+    
+    feedbackForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const userName = document.getElementById('userName').value.trim();
+        const userFeedback = document.getElementById('userFeedback').value.trim();
+
+        if (!userName || !userFeedback) {
+            alert('Будь ласка, заповніть усі поля!');
+            return;
+        }
+
+        
+        addReview(userName, userFeedback);
+
+        
+        feedbackForm.reset();
+    });
+
+    
+    function addReview(name, text) {
+        const reviewId = Date.now(); 
+        const newReview = document.createElement('div');
+        newReview.className = 'review';
+        newReview.dataset.id = reviewId; 
+        newReview.innerHTML = `
+            <img src="https://i.pravatar.cc/60?u=${reviewId}" alt="Фото ${name}">
+            <h3>${name}</h3>
+            <p>${text}</p>
+            <button class="delete-review">Видалити</button>
+        `;
+        reviewsContainer.appendChild(newReview);
+
+        
+        saveReviewToLocalStorage(reviewId, name, text);
+    }
+
+    
+    reviewsContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('delete-review')) {
+            const reviewElement = e.target.closest('.review');
+            const reviewId = reviewElement.dataset.id;
+            
+            reviewElement.remove(); 
+            removeReviewFromLocalStorage(reviewId); 
+        }
+    });
+
+    
+    function saveReviewToLocalStorage(id, name, text) {
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push({ id, name, text });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+    }
+
+    
+    function removeReviewFromLocalStorage(id) {
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews = reviews.filter(review => review.id != id);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+    }
+
+ 
+    function loadReviewsFromLocalStorage() {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.className = 'review';
+            reviewElement.dataset.id = review.id;
+            reviewElement.innerHTML = `
+                <img src="https://i.pravatar.cc/60?u=${review.id}" alt="Фото ${review.name}">
+                <h3>${review.name}</h3>
+                <p>${review.text}</p>
+                <button class="delete-review">Видалити</button>
+            `;
+            reviewsContainer.appendChild(reviewElement);
+        });
+    }
+});
