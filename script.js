@@ -240,3 +240,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+function checkout() {
+    document.getElementById("paymentModal").style.display = "block";
+}
+
+function closePaymentModal() {
+    document.getElementById("paymentModal").style.display = "none";
+}
+
+function processPayment(event) {
+    event.preventDefault(); 
+    closePaymentModal();
+    toggleCart(); 
+    alert("Дякуємо за покупку!");
+    clearCart(); 
+}
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
